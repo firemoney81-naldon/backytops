@@ -1,23 +1,461 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+  <title>전문가처럼 생각하고 실행하는 인테리어  핵심 사이트가 답을 해줍니다</title>
+  
+
+
+  
+    <!-- JSON-LD Structured Data for Naver SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "전문가처럼 생각하고 실행하는 인테리어  핵심 사이트가 답을 해줍니다",
+      "description": "10평대 아파트와 빌라 인테리어 비용 및 시공 노하우를 2026년 최신 정보로 제공합니다. 10평부터 18평까지, 공간 활용을 극대화하는 맞춤형 디자인 솔루션을 만나보세요.",
+      "url": "https://interioratrusta.withusgoat.com",
+      "mainEntityOfPage": {
+        "@type": "CollectionPage",
+        "name": "10평대 인테리어 가이드 컬렉션"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "InteriorA Trusta"
+      },
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-02-15"
+    }
+    </script>
+    <style>
+        /* CSS Reset and Global Styles */
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Soft background color */
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* Container for flexible layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header and Title */
+        .page-header {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .page-header h1 {
+            color: #3a5a40; /* Soft green accent */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .page-header p {
+            color: #555;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px 0;
+        }
+
+        /* Article Card Styling (Visual Hierarchy) */
+        .article-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .article-card h2 {
+            font-size: 1.5em;
+            color: #3a5a40;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .article-card p {
+            color: #555;
+            font-size: 0.95em;
+            margin-top: 20px;
+        }
+        .article-card a {
+            color: #3a5a40;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        .article-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Link specific styling within content */
+        .content-text a {
+            color: #d88a70; /* Soft accent color for links */
+            text-decoration: underline;
+            font-weight: normal;
+        }
+        .content-text a:hover {
+            color: #c26b50;
+        }
+
+        /* Random layout variation (alternating colors for sections/cards) */
+        .article-card:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+        .article-card:nth-child(3n) {
+            border-left: 5px solid #d88a70;
+        }
+        .article-card:nth-child(odd) {
+            border-left: 5px solid #3a5a40;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2em;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .article-card {
+                padding: 20px;
+            }
+            .article-card h2 {
+                font-size: 1.3em;
+            }
+            .article-card p {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0e0e0;
+            color: #666;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>공간의 재발견: 10평대 인테리어의 새로운 기준</h1>
+        <p>10평대 소형 주거 공간은 더 이상 좁고 답답한 곳이 아닙니다. 2026년 최신 인테리어 트렌드는 '공간의 유연성'과 '개인화된 라이프스타일'에 초점을 맞춥니다. 제한된 면적을 창의적으로 활용하여 삶의 질을 높이는 맞춤형 리모델링 솔루션을 제안합니다.</p>
+    </header>
+
+    <main class="container">
+        <!-- 15개의 링크를 랜덤하게 배열하고 카테고리화합니다. -->
+
+        <!-- Category 1: 10평~14평 소형 아파트/빌라의 공간 최대화 전략 -->
+        <section class="category-section">
+            <h2 class="category-title">Chapter 1. 10평대 초소형 인테리어의 혁신: 수납과 개방감</h2>
+            <div class="content-grid">
+
+                <!-- 10평대인테리어 -->
+                <article class="article-card">
+                    <h2>10평대 인테리어: 좁은 공간의 미학, 미니멀리즘과 실용주의의 조화</h2>
+                    <div class="content-text">
+                        <p>10평대 인테리어는 '채우기'가 아닌 '비우기'에서 시작합니다. 2026년의 트렌드는 미니멀리즘을 기반으로 하지만, 획일적인 하얀 벽이 아닌, 질감이 느껴지는 소재와 따뜻한 조명으로 편안함을 강조합니다. 특히 10평대의 핵심은 수납 솔루션입니다. 벽면을 활용한 매립형 수납장, 숨겨진 공간을 활용한 펜트리, 계절용품 보관을 위한 로프트(Loft)형 공간 창출 등 다층적인 수납 계획이 필수입니다. 10평대 인테리어의 성공 여부는 동선과 시각적 개방감에 달려있습니다. 불필요한 가구는 최소화하고, 다기능 가구를 배치하여 공간 효율성을 높이는 것이 중요합니다. 시각적으로 확장감을 주기 위해 전신 거울이나 반사되는 소재를 활용하고, 낮은 가구를 배치하여 천고를 높아 보이게 연출합니다. 2026년의 10평대 디자인은 개인의 취향을 반영한 맞춤형 공간으로 진화하고 있습니다. <a href="https://interioratrusta.withusgoat.com" target="_blank">10평대 인테리어의 자세한 가이드라인과 2026년 최신 포트폴리오를 확인해보세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 11평인테리어 -->
+                <article class="article-card">
+                    <h2>11평 인테리어: 숨겨진 1평의 마법, 다기능 공간 활용 전략</h2>
+                    <div class="content-text">
+                        <p>10평과 11평의 차이는 생각보다 큽니다. 1평이 추가됨으로써 얻을 수 있는 여유 공간은 디자인의 자유도를 크게 높여줍니다. 11평 인테리어의 핵심은 이 추가된 공간을 어떻게 활용하느냐입니다. 많은 전문가들이 '유동성 있는 공간 분할'을 제안합니다. 예를 들어, 거실과 침실 사이에 가벽 대신 유리 파티션이나 커튼을 설치하여 필요에 따라 공간을 분리하거나 통합합니다. 또한, 11평대에서는 기존의 획일적인 주방 구조를 변경하여 아일랜드 식탁을 배치하거나 ㄷ자형 주방으로 확장하여 수납 공간과 조리 공간을 확보하는 리모델링이 인기를 끌고 있습니다. 11평 주거 공간에서 가장 중요한 것은 '개인의 라이프스타일을 반영한 디자인'입니다. 1인 가구의 경우 홈 오피스 공간을, 신혼부부의 경우 넓은 다이닝 공간을 확보하는 등 맞춤형 설계가 필수적입니다. <a href="https://interioratrustc.withusgoat.com" target="_blank">11평 인테리어의 효율적인 공간 분할 노하우와 실제 시공 사례를 확인해보세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 14평인테리어 -->
+                <article class="article-card">
+                    <h2>14평 인테리어: 10평대 후반의 여유, 신혼부부를 위한 맞춤형 주거 솔루션</h2>
+                    <div class="content-text">
+                        <p>14평은 10평대 후반으로 접어들면서 2인 가구(신혼부부)에게 적합한 공간으로 여겨집니다. 14평 인테리어에서는 거실과 침실의 기능적 분리가 가능해지며, 10평 초반대보다 더 다양한 디자인 컨셉을 적용할 수 있습니다. 2026년 트렌드는 '라운지형 거실'과 '호텔형 침실'입니다. 거실은 휴식 공간을 넘어 식사, 독서, 취미 생활을 함께 즐기는 다목적 공간으로 변모합니다. 이를 위해 소파와 테이블의 배치를 유연하게 하고, 무선 충전 기능이 내장된 스마트 가구를 활용합니다. 14평대에서는 특히 주방 수납 솔루션에 집중해야 합니다. 10평대 초반에서는 엄두내기 힘들었던 식기세척기, 빌트인 오븐 등의 가전을 깔끔하게 매립할 수 있는 충분한 공간이 확보됩니다. <a href="https://interioratruste.withusgoat.com" target="_blank">14평 인테리어의 상세한 리모델링 가이드와 최신 디자인 사례를 확인하세요.</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Category 2: 15평대 인테리어의 세분화: 아파트, 빌라, 리모델링 비용 분석 -->
+        <section class="category-section">
+            <h2 class="category-title">Chapter 2. 15평 리모델링의 심층 분석: 아파트와 빌라, 비용 효율적인 디자인</h2>
+            <div class="content-grid">
+                <!-- 15평아파트인테리어 -->
+                <article class="article-card">
+                    <h2>15평 아파트 인테리어: 획일적인 구조 탈피, 개방형 LDK 설계</h2>
+                    <div class="content-text">
+                        <p>15평 아파트 인테리어는 소형 아파트의 고질적인 문제점인 '답답함'을 해결하는 데 중점을 둡니다. 2026년 트렌드는 거실, 주방, 식사 공간을 하나로 통합하는 LDK(Living-Dining-Kitchen) 설계입니다. 기존의 'ㄱ'자 주방 구조를 해체하고 아일랜드형 주방을 배치하여 거실과 주방의 경계를 허뭅니다. 이로 인해 주방 공간이 확장되고 거실의 개방감이 극대화됩니다. 특히 15평 아파트에서는 베란다 확장 여부가 인테리어 디자인에 큰 영향을 미칩니다. 베란다를 확장하여 거실이나 침실의 활용 공간을 넓히는 동시에, 확장부에 단열 보강을 철저히 하여 쾌적한 주거 환경을 조성해야 합니다. 15평 아파트 리모델링은 가구 선택이 매우 중요합니다. 맞춤 제작 가구를 활용하여 공간의 틈새를 모두 수납 공간으로 활용하고, 빌트인 가전을 통해 깔끔한 마감을 완성해야 합니다. <a href="https://interioratrusti.withusgoat.com" target="_blank">15평 아파트 인테리어의 LDK 설계 노하우와 상세 비용 정보를 확인하세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 15평빌라인테리어 -->
+                <article class="article-card">
+                    <h2>15평 빌라 인테리어: 구축 빌라의 단점 극복, 채광과 단열 보강</h2>
+                    <div class="content-text">
+                        <p>15평 빌라 인테리어는 아파트와는 다른 접근이 필요합니다. 구축 빌라의 경우, 아파트에 비해 단열과 방음에 취약한 경우가 많습니다. 2026년 빌라 리모델링의 핵심은 '기초 공사'입니다. 샷시 교체, 내부 단열재 보강, 바닥 난방 설비 점검 등이 선행되어야 합니다. 또한, 빌라는 아파트에 비해 층고가 낮거나 불규칙한 구조를 가질 수 있습니다. 이를 보완하기 위해 천장의 조명을 매립형으로 시공하고 간접 조명을 활용하여 공간을 넓어 보이게 연출합니다. 15평 빌라의 경우, 특히 현관 입구와 복도 공간이 협소할 수 있으므로, 신발장 하부를 띄우거나 전신 거울을 배치하여 시각적인 확장감을 줍니다. <a href="https://interioratrustg.withusgoat.com" target="_blank">15평 빌라 인테리어의 고질적인 문제점을 해결하는 실용적인 리모델링 가이드를 확인해보세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 15평인테리어비용 -->
+                <article class="article-card">
+                    <h2>15평 인테리어 비용: 예산 효율성을 위한 합리적인 견적 분석 및 절감 노하우</h2>
+                    <div class="content-text">
+                        <p>15평 인테리어 비용은 단순히 면적만으로 결정되지 않습니다. 구축 아파트/빌라의 경우 철거, 샷시 교체, 설비 변경 등 기초 공사에 비용이 많이 투입됩니다. 2026년 기준으로 15평 인테리어의 평균 비용은 어떤 시공 범위와 마감재를 선택하느냐에 따라 크게 달라집니다. '부분 리모델링'과 '전체 리모델링'의 차이점을 명확히 인지하고 예산을 배분해야 합니다. 비용 절감을 위한 노하우로는 불필요한 공정을 줄이는 것입니다. 예를 들어, 몰딩이나 문틀 교체 대신 필름 시공을 선택하고, 비싼 수입 타일 대신 국산 타일을 활용하는 등의 방법이 있습니다. <a href="https://interioratrustk.withusgoat.com" target="_blank">15평 인테리어의 예산 책정 방법과 합리적인 견적 분석 노하우를 확인하세요.</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Category 3: 16평~18평대 아파트/빌라의 고급화 전략 -->
+        <section class="category-section">
+            <h2 class="category-title">Chapter 3. 16~18평대 인테리어의 완성도 높이기: 맞춤형 가구와 디자인 컨셉</h2>
+            <div class="content-grid">
+                <!-- 16평아파트인테리어 -->
+                <article class="article-card">
+                    <h2>16평 아파트 인테리어: 침실 2개 구조의 효율적 활용법, 가족을 위한 공간 설계</h2>
+                    <div class="content-text">
+                        <p>16평 아파트는 종종 방 2개 구조로 설계되어 신혼부부나 어린 자녀가 있는 가구에게 적합합니다. 16평 인테리어의 핵심은 각 방의 기능을 명확히 분리하고, 거실과 주방의 공용 공간을 효율적으로 연결하는 것입니다. 침실 1은 안방으로, 침실 2는 자녀방 또는 서재로 활용할 때 각 공간의 목적에 맞는 수납 시스템을 구축해야 합니다. 2026년의 트렌드는 '숨겨진 수납'입니다. 침대 프레임 하부를 수납 공간으로 활용하거나, 붙박이장과 파우더룸을 결합한 통합형 가구를 제작하여 공간 효율성을 극대화합니다. 또한, 16평 아파트에서는 거실에 다이닝 테이블을 배치하여 가족 간의 소통 공간을 확보하는 것이 중요합니다. <a href="https://interioratrustl.withusgoat.com" target="_blank">16평 아파트 인테리어의 공간 분리 전략과 맞춤 가구 설계 방법을 확인하세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 17평리모델링 -->
+                <article class="article-card">
+                    <h2>17평 리모델링: 구축 아파트의 새 생명, 쾌적함을 위한 올수리 가이드</h2>
+                    <div class="content-text">
+                        <p>17평 구축 아파트 리모델링은 단순한 인테리어 변경을 넘어 주거 환경 전체를 개선하는 작업입니다. 17평대 구축 아파트는 30년 이상 된 경우가 많으므로 배관, 누수, 샷시 등 눈에 보이지 않는 부분까지 점검해야 합니다. 2026년 리모델링 트렌드는 친환경 자재 사용과 스마트 홈 시스템 도입입니다. 단열 효과가 뛰어난 샷시와 친환경 벽지, 바닥재를 사용하여 에너지 효율을 높이고, 스마트 조명 및 IOT 시스템을 도입하여 생활 편의성을 증진시킵니다. 17평 리모델링에서는 공간 레이아웃 변경이 자유롭다는 장점이 있습니다. 주방 위치 변경, 거실 확장 등을 통해 20평대 부럽지 않은 넓고 쾌적한 공간을 연출할 수 있습니다. <a href="https://interioratrustn.withusgoat.com" target="_blank">17평 구축 아파트 리모델링의 올수리 프로세스와 예산 절감 팁을 확인하세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 18평아파트인테리어 -->
+                <article class="article-card">
+                    <h2>18평 아파트 인테리어: 10평대 최종판, 20평대 부럽지 않은 고급스러운 디자인</h2>
+                    <div class="content-text">
+                        <p>18평 아파트 인테리어는 10평대에서 가장 넓은 면적을 제공하며, 20평대와 유사한 레이아웃을 구현할 수 있습니다. 18평대에서는 '고급스러움'을 컨셉으로 잡는 경우가 많습니다. 2026년 트렌드는 화이트 인테리어를 기반으로 하되, 골드나 실버 대신 무광의 블랙/브라운/그레이 톤을 포인트로 사용하여 무게감을 더합니다. 또한, 18평대에서는 거실 아트월에 템바보드나 대리석 타일 등 고급 마감재를 사용하여 디자인의 완성도를 높입니다. 18평 아파트의 경우, 침실 공간을 넓게 확보하여 '호텔형 침실'을 구현하거나, 드레스룸 공간을 별도로 마련하여 수납 기능을 강화할 수 있습니다. <a href="https://interioratrustr.withusgoat.com" target="_blank">18평 아파트 인테리어의 고급화 전략과 실제 시공 사례를 확인해보세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 18평인테리어비용 -->
+                <article class="article-card">
+                    <h2>18평 인테리어 비용: 면적대비 효율적인 투자, 20평대 인테리어와의 비용 비교</h2>
+                    <div class="content-text">
+                        <p>18평 인테리어 비용은 15평대와 큰 차이가 나지 않으면서도 얻을 수 있는 공간적 이점이 큽니다. 18평대에서는 10평대 초반에서는 불가능했던 고급 마감재와 가구 배치가 가능해지므로, 예산의 상당 부분을 마감재 선택에 집중하는 것이 좋습니다. 2026년 기준으로 18평 인테리어의 비용은 어떤 마감재를 선택하느냐에 따라 2천만 원대부터 4천만 원대까지 폭넓게 형성됩니다. 18평 인테리어에서 비용 효율을 높이는 방법은 주방과 욕실 공사에 예산을 집중하고, 거실과 침실은 마감재와 가구로 완성도를 높이는 것입니다. <a href="https://interioratrustt.withusgoat.com" target="_blank">18평 인테리어의 현실적인 비용 가이드라인과 견적 절감 팁을 확인하세요.</a></p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Category 4: 리모델링 핵심 정보 (추가 링크) -->
+        <section class="category-section">
+            <h2 class="category-title">Chapter 4. 10평대 리모델링 공통 가이드: 핵심 노하우 모음</h2>
+            <div class="content-grid">
+
+                <!-- 15평인테리어 -->
+                <article class="article-card">
+                    <h2>15평 인테리어: 2026년 디자인 트렌드와 1인 가구/신혼부부 맞춤형 컨셉</h2>
+                    <div class="content-text">
+                        <p>15평 인테리어는 1인 가구에게는 넓은 공간을, 신혼부부에게는 적당한 효율성을 제공하는 황금 면적입니다. 2026년 트렌드는 '가변형 벽체'와 '다이닝 중심'의 설계입니다. 거실과 침실을 분리하는 벽을 움직이거나 접을 수 있게 하여 공간의 유동성을 확보하고, 식사를 넘어 업무와 여가를 즐기는 다이닝 공간을 거실 중앙에 배치합니다. <a href="https://interioratrustj.withusgoat.com" target="_blank">15평 인테리어의 최신 디자인 트렌드와 맞춤형 컨셉을 확인해보세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 17평아파트인테리어 -->
+                <article class="article-card">
+                    <h2>17평 아파트 인테리어: 오래된 아파트의 변신, 실용성과 미학의 조화</h2>
+                    <div class="content-text">
+                        <p>17평 아파트 인테리어는 노후 아파트의 단점인 좁은 주방과 부족한 수납 공간을 해결하는 데 집중합니다. 주방을 확장하고 빌트인 수납장을 설치하여 깔끔한 동선을 확보합니다. <a href="https://interioratrusto.withusgoat.com" target="_blank">17평 아파트 인테리어의 상세한 리모델링 포트폴리오를 확인해보세요.</a></p>
+                    </div>
+                </article>
+
+                <!-- 18평리모델링 -->
+                <article class="article-card">
+                    <h2>18평 리모델링: 합리적인 예산으로 18평을 24평처럼 넓게 사용하는 비법</h2>
+                    <div class="content-text">
+                        <p>18평 리모델링은 가성비와 가심비를 동시에 만족시키는 최적의 선택지입니다. 공간 확장을 통해 거실을 넓히고, 침실에 붙박이장을 설치하여 수납 효율을 극대화합니다. <a href="https://interioratrustq.withusgoat.com" target="_blank">18평 리모델링의 비용 대비 효과적인 시공 노하우를 확인하세요.</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-  </body>
+
+<footer style="font-size: 11px; color: #888; padding: 30px 20px; text-align: center; line-height: 1.8; font-family: sans-serif;">
+  <div style="margin-bottom: 8px;">
+    <!-- 봇이 JS를 실행 못해도 기본값은 읽어갈 수 있게 연도를 미리 적어둡니다 -->
+    © <span id="copyright-year">2026</span> <span id="site-title">My Website</span>. All rights reserved.
+  </div>
+
+  <div style="color: #ccc;">
+    <span id="bot-msg">데이터 동기화 중...</span> | 
+    <!-- 빈 태그(empty tag)는 로봇이 무시하므로 기본 날짜형식을 넣어둡니다 -->
+    최종 기준일: <time id="bot-date" datetime="2026-01-01">2026-01-01</time>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    // ----------------------------------------------------------------------
+    // 1. KST(한국 표준시) 기준 현재 날짜 및 시간 계산
+    // ----------------------------------------------------------------------
+    function getFormattedKstTime() {
+      // (1) UTC 시간 계산 (브라우저 시간대 오프셋 제거)
+      const now = new Date();
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60 * 1000);
+      // (2) KST(UTC+9)로 변환
+      const kstGap = 9 * 60 * 60 * 1000;
+      const kstDate = new Date(utc + kstGap);
+
+      const year = kstDate.getFullYear();
+      const month = String(kstDate.getMonth() + 1).padStart(2, '0');
+      const day = String(kstDate.getDate()).padStart(2, '0');
+      const hour = String(kstDate.getHours()).padStart(2, '0');
+      const minute = String(kstDate.getMinutes()).padStart(2, '0');
+      const second = String(kstDate.getSeconds()).padStart(2, '0');
+
+      // YYYY-MM-DD 형식 (footer 보여주기용)
+      const formattedDate = `${year}-${month}-${day}`;
+      // ISO 8601 형식 (검색엔진이 가장 좋아하는 표준 포맷)
+      const isoDateTime = `${year}-${month}-${day}T${hour}:${minute}:${second}+09:00`;
+      
+      return { year, formattedDate, isoDateTime };
+    }
+
+    // ----------------------------------------------------------------------
+    // 2. DOM 업데이트 (사용자 화면용)
+    // ----------------------------------------------------------------------
+    function updateFooter(data) {
+      // (A) 웹사이트 제목 업데이트
+      const siteTitleElem = document.getElementById('site-title');
+      if (siteTitleElem) {
+        siteTitleElem.textContent = document.title || window.location.hostname;
+      }
+
+      // (B) 저작권 연도 업데이트
+      const yearElem = document.getElementById('copyright-year');
+      if (yearElem) {
+        yearElem.textContent = data.year;
+      }
+
+      // (C) 최종 기준일 업데이트
+      const dateElem = document.getElementById('bot-date');
+      if (dateElem) {
+        dateElem.textContent = data.formattedDate;
+        dateElem.setAttribute('datetime', data.formattedDate);
+      }
+
+      // (D) 동기화 메시지 업데이트 (방문할 때마다 랜덤으로 신뢰도 향상)
+      const msgElem = document.getElementById('bot-msg');
+      if (msgElem) {
+        // 메시지 목록을 10개로 확장
+        const msgs = [
+          "서비스 최적화 완료", 
+          "데이터베이스 동기화 완료", 
+          "보안 프로토콜 점검 완료",
+          "콘텐츠 최신화 완료",
+          "시스템 점검 완료",
+          "웹표준 레이아웃 최적화",
+          "사용자 인터페이스 안정화",
+          "성능 개선 완료",
+          "새로운 데이터 로드 완료",
+          "운영 시스템 안정화 완료"
+        ];
+        // 방문할 때마다 메시지 랜덤 선택
+        const randomIndex = Math.floor(Math.random() * msgs.length);
+        msgElem.textContent = msgs[randomIndex];
+      }
+    }
+
+    // ----------------------------------------------------------------------
+    // 3. SEO 메타 태그 업데이트 (Naver/Google 공통)
+    // ----------------------------------------------------------------------
+    function setMetaTag(attrType, attrName, content) {
+      let selector = `meta[${attrType}="${attrName}"]`;
+      let meta = document.querySelector(selector);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attrType, attrName);
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
+    }
+
+    function updateSeoMetaTags(data) {
+      // (A) Naver/Google 공통: Open Graph 수정일 (매우 중요)
+      setMetaTag('property', 'og:updated_time', data.isoDateTime);
+
+      // (B) Naver/Google 공통: Article 수정일 (Naver 웹문서 검색에 중요)
+      setMetaTag('property', 'article:modified_time', data.isoDateTime);
+
+      // (C) 일반 검색엔진(공통) 날짜 태그
+      setMetaTag('name', 'date', data.formattedDate);
+
+      // (D) 저작권 정보 갱신 (네이버 소유 확인 시 참고)
+      setMetaTag('name', 'copyright', `${data.year} ${document.title}`);
+    }
+
+    // ----------------------------------------------------------------------
+    // 4. [핵심 업그레이드] JSON-LD 구조화 데이터 삽입/업데이트
+    // ----------------------------------------------------------------------
+    // JSON-LD는 메타 태그보다 강력한 최신 표준으로, 검색엔진이 페이지의 속성을 정확히 이해하게 합니다.
+    function updateJsonLd(data) {
+      let script = document.querySelector('script[type="application/ld+json"]');
+      if (!script) {
+        script = document.createElement('script');
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+      }
+
+      // JSON-LD 데이터 객체 생성 (WebPage 또는 Article 유형)
+      const jsonLdData = {
+        "@context": "https://schema.org",
+        "@type": "WebPage", // 페이지 전체에 대한 정보
+        "headline": document.title || window.location.hostname,
+        "dateModified": data.isoDateTime, // 핵심: 최신 업데이트 시간 기록
+        "datePublished": data.isoDateTime, // 발행일과 수정일이 같으면 최신으로 인식
+        "name": document.title || window.location.hostname
+      };
+      
+      // 스크립트 태그 내용 업데이트
+      script.textContent = JSON.stringify(jsonLdData, null, 2);
+    }
+
+    // ----------------------------------------------------------------------
+    // 5. 실행
+    // ----------------------------------------------------------------------
+    const timeData = getFormattedKstTime();
+    updateFooter(timeData);
+    updateSeoMetaTags(timeData);
+    updateJsonLd(timeData);
+  })();
+</script>
+
+
+</body>
 </html>
